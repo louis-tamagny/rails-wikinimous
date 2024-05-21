@@ -1,0 +1,8 @@
+<h1><%=@article.title  %></h1>
+<p><%=  @article.content%></p>
+
+<div class="btn-group w-100" role="group">
+  <%= link_to 'back', articles_path, class: 'btn btn-primary mt-2' %>
+  <%= link_to 'edit', edit_article_path(@article), class: new_article_path, class: 'btn btn-primary mt-2' %>
+  <%= link_to 'delete', article_path(@article), data: {turbo_method: :delete, turbo_confirm: '?'}, class: new_article_path, class: 'btn btn-primary mt-2' %>
+</div>

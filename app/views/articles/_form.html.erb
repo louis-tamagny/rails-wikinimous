@@ -1,0 +1,14 @@
+<div class="mt-5 p-2 border border-primary rounded">
+  <%= form_with model: @article, class: 'd-flex flex-column '  do |f| %>
+    <h2>New article form</h2>
+    <div class= 'd-flex flex-column mb-3 '>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    </div>
+    <%= f.submit class:'btn btn-primary'%>
+  <% end %>
+</div>
+
+<%= link_to 'cancel', articles_path, class: 'btn btn-secondary mt-3 text-align-right' %>
